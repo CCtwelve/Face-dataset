@@ -1,6 +1,5 @@
-# ECCV-FaceDataset
+# Face-dataset
 
-This repository is for anonymous use with ECCV papers.
 
 ## Introduction
 
