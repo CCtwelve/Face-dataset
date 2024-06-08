@@ -8,29 +8,29 @@ In this repository, we provide a simple dataset example which consists of three 
 
 ## Dataset Construction
 Our dataset includes the following sections:
-![图片加载失败](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/structure.jpg)
+![图片加载失败](https://github.com/CCtwelve/Face-dataset/blob/main/display/structure.jpg)
 Among them, the jpg files under the "obj" directory are 2D UV maps, and the mtl is the file that links UV maps with obj, while stl represents 3D mesh information. Under the "points" directory, the cie file is our custom data format. We provide Python version data reading code, so people can read the desired data from the cie file according to their needs. This code can obtain the original facial point cloud and landmark coordinates from the cie file. It's worth mentioning that the points.asc file is the facial point cloud that has been preprocessed by we and is used as input data for GPS. The preprocessing methods include segmentation, smoothing, outlier filtering,  etc., to make the face smoother and more regular.
 
 ## Display
 We will display the data styles of for sections.
 
 ### Obj
-![图片加载失败](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/obj.gif)
+![图片加载失败](https://github.com/CCtwelve/Face-dataset/blob/main/display/obj.gif)
 
 ### Texture
-![图片加载失败](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/texture.jpg)
+![图片加载失败](https://github.com/CCtwelve/Face-dataset/blob/main/display/texture.jpg)
 
 ### Point And Landmark
 
 This section displays the post-processed facial point cloud and the landmark coordinates annotated by experts.
 
-![图片加载失败](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/points_and_landmark.gif)
+![图片加载失败](https://github.com/CCtwelve/Face-dataset/blob/main/display/points_and_landmark.gif)
 
 ### Point cloud denoising process result
 This section displays the results before and after the noise reduction process of the point cloud, with the processed results serving as the input data for the  Geometric point sampling (GPS).
 <center>
 
-| ![Before noise reduction](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/befor.gif) | ![After noise reduction](https://github.com/eccvanonymity/ECCV-FaceDataset/blob/main/display/after.gif) |
+| ![Before noise reduction](https://github.com/CCtwelve/Face-dataset/blob/main/display/befor.gif) | ![After noise reduction](https://github.com/CCtwelve/Face-dataset/blob/main/display/after.gif) |
 |:---:|:---:|
 | Before noise reduction processing. | After noise reduction processing. |
 </center>
