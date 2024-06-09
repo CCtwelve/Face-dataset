@@ -1,5 +1,5 @@
 # Face-dataset
-
+Our database has been authorized by the volunteers for public use for scientific research purposes. Applicants are required to apply in the name of an organization and to sign a confidentiality agreement for authorization.
 
 ## Introduction
 
