@@ -1,5 +1,4 @@
 # Face-dataset
-Our dataset has been authorized by the volunteers for public use for scientific research purposes. The full data will come after acceptance.
 
 ## Introduction
 
@@ -33,4 +32,6 @@ This section displays the results before and after the noise reduction process o
 |:---:|:---:|
 | Before noise reduction processing. | After noise reduction processing. |
 </center>
- 
+
+Our dataset has been authorized by the volunteers for public use for scientific research purposes. 
+
