@@ -1,5 +1,5 @@
 # Face-dataset
-Our database has been authorized by the volunteers for public use for scientific research purposes.
+Our database has been authorized by the volunteers for public use for scientific research purposes.The full data will come after acceptance.
 
 ## Introduction
 
