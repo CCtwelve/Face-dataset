@@ -7,18 +7,41 @@ In this repository, we provide a simple dataset example which consists of three 
 ## Dataset Construction
 Our dataset includes the following sections:
 
-### Key File Descriptions
+## Dataset Construction
 
-| File | Description |
-| :--- | :--- |
-| **`obj/neutral.jpg`** | **2D UV texture map**. |
-| **`obj/neutral.obj`** | Standard 3D mesh geometry file. |
-| **`obj/neutral.mtl`** | Material library file, used with the `.obj` file. |
-| **`obj/neutral.stl`** | Another 3D mesh file format. |
-| **`points/neutral.cie`** | **Our custom data format**. Contains the original facial point cloud and landmark coordinates. |
-| **`points/neutral_points.asc`** | **Preprocessed facial point cloud**. Serves as input data for the GPS. Generated via segmentation, smoothing, outlier filtering, etc. |
-| **`points/neutral_landmarks.txt`** | Contains the **3D coordinates of facial landmarks**. |
-| `texture/*.jpg` | Multi-view texture images. |
+Our dataset includes the following structure:
+
+```
+Data/
+├── female/
+│   ├── 0001/                          # Subject ID
+│   │   ├── neutral/                   # Expression Sequence
+│   │   │   ├── obj/
+│   │   │   │   ├── neutral.obj        # 3D mesh geometry
+│   │   │   │   ├── neutral.mtl        # Material file (links UV map to .obj)
+│   │   │   │   ├── neutral.stl        # 3D mesh file
+│   │   │   │   └── neutral.jpg        # 2D UV texture map
+│   │   │   ├── points/
+│   │   │   │   ├── neutral.cie        # Custom format (original point cloud & landmarks)
+│   │   │   │   ├── neutral_points.asc # Preprocessed point cloud (GPS input)
+│   │   │   │   └── neutral_landmarks.txt # 3D coordinates of landmarks
+│   │   │   └── texture/
+│   │   │       ├── front.jpg
+│   │   │       ├── left.jpg
+│   │   │       └── right.jpg
+│   │   ├── angry/                     # Other expressions...
+│   │   ├── smiling/
+│   │   ├── surprised/
+│   │   ├── pouting/
+│   │   ├── eyes_closed/
+│   │   ├── left_eye_closed/
+│   │   └── right_eye_closed/
+│   ├── 0002/                          # Next subject...
+│   ├── 0003/
+│   └── ...
+└── male/
+    └── ...                            # Structure mirrors `female/`
+```
 
 We provide Python code to read the desired data (e.g., original point cloud, landmarks) from the `.cie` file.
 Among them, the jpg files under the "obj" directory are 2D UV maps, and the mtl is the file that links UV maps with obj, while stl represents 3D mesh information. Under the "points" directory, the cie file is our custom data format. We provide Python version data reading code, so people can read the desired data from the cie file according to their needs. This code can obtain the original facial point cloud and landmark coordinates from the cie file. It's worth mentioning that the asc file is the preprocessed point cloud of a face, serving as input data for the GPS, while the txt file contains the three-dimensional coordinates of landmarks. The preprocessing methods include segmentation, smoothing, outlier filtering, etc., to make the face smoother and more regular. The preprocessing methods include segmentation, smoothing, outlier filtering,  etc., to make the face smoother and more regular.
